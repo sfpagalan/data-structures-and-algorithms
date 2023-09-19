@@ -1,27 +1,19 @@
-# Code Challenges
+# Challenge Title
 
-Part of growing as a programmer is to practice, practice, practice. Throughout this course, you will complete a set of daily code challenges. Each set will contain up to ten problems.
+- Reverse Array
 
-The daily challenges will be posted by the instructor at the end of lecture every day. Plan to focus on this task with your partner every day after class until 6 p.m., completing as much as possible during this time, then complete the remainder of the challenges on your own, as needed.
+## Whiteboard Process
+![Reverse Array](401codechallenge-reverseArray.jpg)
 
-## Challenge Execution and Testing
+## Approach & Efficiency
 
-At the end of lecture each day, a new challenge will be published in Canvas. Copy the contents of the file into **this folder** in the `data-structures-and-algorithms` repository and work on the individual problems for the day. It's a good practice to add and commit regularly as you finish each problem in the day's challenge. When you are finished, push your branch to GitHub to create a PR.
+- Approach: The approach taken is an iterative one, which reverses an array by creating a new array and adding elements from the input array in reverse order.
 
-Every code challenge file is divided into two sections: challenges and tests. You will need to add your own solutions to each challenge but should not modify the tests in any way. These tests will ensure that your solution is meeting the requirements of each challenge. Even though you may not modify the tests, you are encouraged to read them to see what is being evaluated.
+- Why: This approach was chosen because it adheres to the challenge requirement of not using built-in methods and is straightforward to implement.
 
-- Run your test from the root of the `data-structures-and-algorithms` repository, as follows
-  - Run All Tests: `npm test`
-  - Run a specific test: `npm test challenges-01`
+- Big O Time Complexity: The time complexity is O(n) because it iterates through the input array once, performing a constant-time operation for each element.
 
-### Continuous Testing
+- Big O Space Complexity: The space complexity is also O(n) because it creates a new array to store the reversed elements, with space proportional to the size of the input array.
 
-The repository contains a folder named `.github` which contains a configuration file that will automatically execute all of your tests when you check in your code to GitHub.
-
-You can see the results of your tests online in the "Actions" tab of your repository on GitHub
-
-> NOTE: This will be the source of your grades as well.
-
-## Assignment Submission
-
-When you finish the assignment each day, make a new pull request from your daily challenge branch to your master branch and submit the PR URL in Canvas. You can submit a link to a pull request even if the pull request is closed.
+## Solution
+![Output](reversedArray.png)
