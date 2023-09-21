@@ -1,4 +1,10 @@
-# ReverseArray
+## Table of Contents
+
+- [Code 1](#ReverseArray)
+- [Code 2](#ArrayInsertShift)
+- [Code 3](#BinarySearch)
+
+# Code 1: ReverseArray
 
 ## Whiteboard Process
 
@@ -18,7 +24,7 @@
 
 ![Output](reversedArray.png)
 
-# ArrayInsertShift
+# Code 2: ArrayInsertShift
 
 ## Whiteboard Process
 
@@ -43,3 +49,28 @@
 
 ## Solution
 ![Output](reversedArray.png)
+
+
+# Code 3: BinarySearch
+
+## Whiteboard Process
+
+![Binary Search](BinarySearch.png)
+
+## Approach & Efficiency
+
+- Approach:
+  - The approach taken here is the Binary Search algorithm.
+
+- Why:
+  - This algorithm is used because it efficiently searches a sorted array by repeatedly dividing the search space in half, reducing the time complexity significantly compared to linear search.
+
+- Big O Time Complexity:
+  - Binary search efficiently narrows down the search space by half with each comparison.
+
+- Big O Space Complexity:
+  - Binary search uses a constant amount of extra space for variables, making it space-efficient.
+
+## Solution
+![Output](BinarySearch-output1.png)
+![Output](BinarySearch-output2.png)
