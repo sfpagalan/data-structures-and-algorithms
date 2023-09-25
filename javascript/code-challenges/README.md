@@ -50,6 +50,29 @@
 ## Solution
 ![Output](reversedArray.png)
 
+# Code 3: BinarySearch
+
+## Whiteboard Process
+
+![Binary Search](BinarySearch.png)
+
+## Approach & Efficiency
+
+- Approach:
+  - The approach taken here is the Binary Search algorithm.
+
+- Why:
+  - This algorithm is used because it efficiently searches a sorted array by repeatedly dividing the search space in half, reducing the time complexity significantly compared to linear search.
+
+- Big O Time Complexity:
+  - Binary search efficiently narrows down the search space by half with each comparison.
+
+- Big O Space Complexity:
+  - Binary search uses a constant amount of extra space for variables, making it space-efficient.
+
+## Solution
+![Output](BinarySearch-output1.png)
+![Output](BinarySearch-output2.png)
 
 # Code 3: BinarySearch
 
@@ -74,3 +97,41 @@
 ## Solution
 ![Output](BinarySearch-output1.png)
 ![Output](BinarySearch-output2.png)
+
+# Code 5: Singly Linked Lists
+
+## Whiteboard Process
+
+![LinkedList](LinkedListWhiteboard.png)
+
+## Approach & Efficiency
+
+- Approach:
+  - LinkedList Class:
+    - Implemented a singly linked list with a head property.
+  - Insertion (insert method):
+    - Added new nodes to the head of the list for O(1) time complexity.
+  - Search (includes method):
+    - Used linear search to check for value existence, resulting in O(n) worst-case time complexity.
+  - String Representation (toString method):
+    - Constructed a human-readable string representation of the linked list for visualization.
+
+- Why:
+  - Insertion at the Head:
+    - Chose insertion at the head for O(1) time complexity.
+  - Linear Search for Inclusion:
+    - Linear search ensures examining each node once for value existence.
+  - String Representation:
+    - Built a clear and concise string for easier debugging.
+
+- Big O Time Complexity:
+  - `insert` method: O(1)
+  - `includes` method: O(n) (worst-case), O(1) (best-case)
+  - `toString` method: O(n)
+
+- Big O Space Complexity:
+  - The space complexity of this implementation is O(n), where n is the number of nodes in the linked list. This space is primarily used for storing the nodes themselves, and the space complexity does not depend on the number of operations performed on the linked list.
+
+## Solution
+[Code](code-challenges/LinkedList.js)
+![Output](LinkedListOutput.png)
