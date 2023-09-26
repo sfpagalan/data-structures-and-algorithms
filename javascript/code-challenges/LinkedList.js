@@ -56,3 +56,5 @@ console.log(linkedList.includes('Gojo'));  // Output: true
 
 console.log(linkedList.includes('Naruto'));  // Output: false
 // Naruto is not part of the Anime Fun Club listed above
+
+module.exports = LinkedList;
