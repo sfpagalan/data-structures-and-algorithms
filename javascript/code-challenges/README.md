@@ -177,25 +177,25 @@
 ## Approach & Efficiency
 
 - Approach:
-  The kthFromEnd method uses two pointers, a slow pointer and a fast pointer, to find the kth node from the end of the linked list. The approach involves iterating through the linked list using these pointers in a way that ensures the desired result is obtained efficiently.
-
-  - Initialize both the slow and fast pointers to the head of the linked list.
-
-  - Move the fast pointer k nodes ahead of the slow pointer. This is done by iterating over the list with the fast pointer.
-
-  - After the fast pointer has been moved k nodes ahead, iterate both the slow and fast pointers simultaneously until the fast pointer reaches the end of the list. This ensures that the slow pointer will be at the kth node from the end when the fast pointer reaches the end.
-
-  - Return the value of the node pointed to by the slow pointer, which represents the kth node from the end.
+  1. Initialize a dummy node dummy and a current pointer to it.
+  2. Use a loop that continues until either list1 or list2 is not empty.
+  3. Inside the loop, if list1 has elements, attach the head of list1 to the current.next node and move list1.head to the next node.
+  4. If list2 has elements, do the same for list2.
+  5. This process alternates between adding nodes from list1 and list2 to the result list.
+  6. Create a new LinkedList called newList with newList.head set to dummy.next, which is the merged list.
+  7. Return newList.
 
 - Why:
-  This approach is efficient because it requires only one pass through the linked list, with both the slow and fast pointers moving at different speeds. The fast pointer moves k nodes ahead, and then both pointers move together until the end of the list is reached. This ensures that the slow pointer is always positioned at the kth node from the end when the fast pointer reaches the end.
+  This approach is used because it efficiently combines the two input lists into a new list with minimal additional space usage and a linear time complexity. It utilizes a dummy node to simplify the merging process and maintains a current pointer to build the merged list step by step. By alternating between list1 and list2, it ensures that nodes from both lists are included in the merged result, making it a straightforward and efficient way to zip two linked lists together.
 
 - Big O Time Complexity:
-  The time complexity of this approach is O(n), where n is the number of nodes in the linked list. This is because we iterate through the list once, and the number of iterations is proportional to the length of the list.
+  The time complexity of this zipLists function is O(N), where N is the total number of nodes in both list1 and list2. This is because the function iterates through both lists once and combines them into a new list, which takes linear time.
+
 
 - Big O Space Complexity:
-  The space complexity is O(1) because we use a constant amount of extra space for the two pointers regardless of the size of thc e linked list.
+  The space complexity is O(1) for auxiliary space because the function does not use any additional data structures that scale with the size of the input lists. It only uses a constant amount of extra space for variables like dummy and current.
 
 ## Solution
-[Code](code-challenges/kthFromEnd.js)
-![Output](kthFromEndOutput.png)
+[Code](code-challenges/zipList.js)
+![Output](zipListOutput.png)
+![Output](zipListOutput2.png)
