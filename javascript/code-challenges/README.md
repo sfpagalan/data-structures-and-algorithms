@@ -209,25 +209,18 @@
 ## Approach & Efficiency
 
 - Approach:
-  1. Initialize a dummy node dummy and a current pointer to it.
-  2. Use a loop that continues until either list1 or list2 is not empty.
-  3. Inside the loop, if list1 has elements, attach the head of list1 to the current.next node and move list1.head to the next node.
-  4. If list2 has elements, do the same for list2.
-  5. This process alternates between adding nodes from list1 and list2 to the result list.
-  6. Create a new LinkedList called newList with newList.head set to dummy.next, which is the merged list.
-  7. Return newList.
+  Implemented using a singly linked list, where each new element is added to the rear of the queue (enqueue) and removed from the front (dequeue). This linked list approach also enables constant-time operations (O(1)) for both enqueue and dequeue.
 
 - Why:
-  This approach is used because it efficiently combines the two input lists into a new list with minimal additional space usage and a linear time complexity. It utilizes a dummy node to simplify the merging process and maintains a current pointer to build the merged list step by step. By alternating between list1 and list2, it ensures that nodes from both lists are included in the merged result, making it a straightforward and efficient way to zip two linked lists together.
+  Queues are commonly used for managing data in a first-in-first-out (FIFO) manner, like in task scheduling or breadth-first searches.
 
-- Big O Time Complexity:
-  The time complexity of this zipLists function is O(N), where N is the total number of nodes in both list1 and list2. This is because the function iterates through both lists once and combines them into a new list, which takes linear time.
+- Big O:
+  enqueue: O(1) - Adding an element to the rear of the queue takes constant time, involving creating a new node and updating references.
+  dequeue: O(1) - Removing the front element from the queue also takes constant time, as it only requires updating references.
+  peek: O(1) - Peeking at the front element involves accessing the front node's value directly.
+  isEmpty: O(1) - Checking if the queue is empty is a constant-time operation based on whether the front node is null or not.
 
-
-- Big O Space Complexity:
-  The space complexity is O(1) for auxiliary space because the function does not use any additional data structures that scale with the size of the input lists. It only uses a constant amount of extra space for variables like dummy and current.
 
 ## Solution
-[Code](code-challenges/zipList.js)
-![Output](zipListOutput.png)
-![Output](zipListOutput2.png)
+[Code](code-challenges/stacksQueue.js)
+![Output](stacksQueueOutput.png)
