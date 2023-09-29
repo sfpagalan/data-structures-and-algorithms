@@ -199,3 +199,35 @@
 [Code](code-challenges/zipList.js)
 ![Output](zipListOutput.png)
 ![Output](zipListOutput2.png)
+
+# Code 10: Stacks and Queues
+
+## Whiteboard Process
+
+![Stacks and Queues](LinkedListWhiteboard.png)
+
+## Approach & Efficiency
+
+- Approach:
+  1. Initialize a dummy node dummy and a current pointer to it.
+  2. Use a loop that continues until either list1 or list2 is not empty.
+  3. Inside the loop, if list1 has elements, attach the head of list1 to the current.next node and move list1.head to the next node.
+  4. If list2 has elements, do the same for list2.
+  5. This process alternates between adding nodes from list1 and list2 to the result list.
+  6. Create a new LinkedList called newList with newList.head set to dummy.next, which is the merged list.
+  7. Return newList.
+
+- Why:
+  This approach is used because it efficiently combines the two input lists into a new list with minimal additional space usage and a linear time complexity. It utilizes a dummy node to simplify the merging process and maintains a current pointer to build the merged list step by step. By alternating between list1 and list2, it ensures that nodes from both lists are included in the merged result, making it a straightforward and efficient way to zip two linked lists together.
+
+- Big O Time Complexity:
+  The time complexity of this zipLists function is O(N), where N is the total number of nodes in both list1 and list2. This is because the function iterates through both lists once and combines them into a new list, which takes linear time.
+
+
+- Big O Space Complexity:
+  The space complexity is O(1) for auxiliary space because the function does not use any additional data structures that scale with the size of the input lists. It only uses a constant amount of extra space for variables like dummy and current.
+
+## Solution
+[Code](code-challenges/zipList.js)
+![Output](zipListOutput.png)
+![Output](zipListOutput2.png)
