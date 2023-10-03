@@ -7,8 +7,8 @@
 - [Code 7](#code-7-k-th-value)
 - [Code 8](#code-8-zip-two-linked-lists)
 - [Code 10](#code-10-stacks-and-queues)
-- [Code 11](#BinarySearch)
-
+- [Code 11](#code-11-stacks-and-queues-pseudo-queue)
+- [Code 12](#code-12-stacks-and-queues-animal-shelter)
 
 # Code 1: ReverseArray
 
@@ -259,3 +259,40 @@
 ## Solution
 [Code](code-challenges/stacksQueue.js)
 ![Output](stacksQueueOutput.png)
+
+# Code 12: Stacks and Queues: Animal Shelter
+
+## Whiteboard Process
+
+![Animal Shelter](LinkedListWhiteboard.png)
+
+## Approach & Efficiency
+
+- Approach:
+  We maintain two separate queues, one for dogs and one for cats. Each element in the queue is an object representing an animal with properties species (either "dog" or "cat"), name, and order (to keep track of the order of arrival).
+
+  When an animal is enqueued, we check its species and add it to the respective queue. We also assign an order number to the animal based on the order it was added to the shelter.
+
+  When dequeuing, we check the preference (pref) and dequeue the animal from the appropriate queue based on the preference while maintaining the order. If the preferred species is not available, we return null.
+
+- Why:
+  The use of separate queues for dogs and cats ensures that we maintain the order of arrival for each species separately, as the animals with lower order numbers will be dequeued first.
+
+  The enqueue method adds animals to their respective queues and assigns order numbers to maintain the first-in, first-out order.
+
+  The dequeue method checks the preference and dequeues the animal from the appropriate queue. If the preferred species is not available, it returns null.
+
+- Big O Time Complexity:
+  - `enqueue` method: O(1)
+    Enqueueing an animal involves appending it to the end of the respective queue, which takes constant time.
+  - `dequeue` method: O(1)
+    Dequeueing an animal also involves removing it from the front of the respective queue, which takes constant time.
+
+- Big O Space Complexity:
+  Space complexity for the AnimalShelter class is O(n), where n is the number of animals enqueued.
+  - We use separate queues for dogs and cats, but the total number of animals determines the space used.
+  - Each animal object includes a constant amount of space, and the queues hold references to these objects.
+
+## Solution
+[Code](code-challenges/AnimalShelter.js)
+![Output](AnimalShelterOutput.png)
