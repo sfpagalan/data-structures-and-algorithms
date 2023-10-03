@@ -1,8 +1,14 @@
 ## Table of Contents
 
-- [Code 1](#ReverseArray)
-- [Code 2](#ArrayInsertShift)
-- [Code 3](#BinarySearch)
+- [Code 1](#code-1-reversearray)
+- [Code 2](#code-2-arrayinsertshift)
+- [Code 3](#code-3-binarysearch)
+- [Code 5](#code-5-singly-linked-lists)
+- [Code 7](#code-7-k-th-value)
+- [Code 8](#code-8-zip-two-linked-lists)
+- [Code 10](#code-10-stacks-and-queues)
+- [Code 11](#BinarySearch)
+
 
 # Code 1: ReverseArray
 
@@ -220,6 +226,35 @@
   peek: O(1) - Peeking at the front element involves accessing the front node's value directly.
   isEmpty: O(1) - Checking if the queue is empty is a constant-time operation based on whether the front node is null or not.
 
+
+## Solution
+[Code](code-challenges/stacksQueue.js)
+![Output](stacksQueueOutput.png)
+
+# Code 11: Stacks and Queues: Pseudo Queue
+
+## Whiteboard Process
+
+![Pseudo Queue](LinkedListWhiteboard.png)
+
+## Approach & Efficiency
+
+- Approach:
+  enqueue(value): To enqueue an element, we simply push it onto `stack1`. This operation has a time complexity of O(1) because we are using the `push` method of the stack.
+
+  dequeue(): To dequeue an element, we need to ensure that the elements in stack2 are in the correct order for a queue (FIFO). If `stack2` is empty, we transfer elements from `stack1` to `stack2`. We do this by popping elements from `stack1` and pushing them onto `stack2`. Once `stack2` has the correct order, we pop an element from `stack2` to simulate the dequeue operation. If `stack2` is not empty, we directly pop an element from it.
+
+- Why:
+  This approach allows us to implement a queue using two stacks while maintaining the FIFO (first-in, first-out) behavior. The idea is to use one stack (`stack1`) for enqueue operations and another stack (`stack2`) for dequeue operations. By transferring elements from `stack1` to `stack2` when needed, we ensure that the elements are in the correct order for dequeuing.
+
+- Big O Time Complexity:
+  Enqueue Operation (enqueue): O(1) - This is because pushing an element onto a stack has a constant time complexity.
+
+  Dequeue Operation (dequeue):
+    In the worst case, when stack2 is empty, we need to transfer all elements from stack1 to stack2. This transfer takes O(N), where N is the number of elements in stack1. However, this operation is amortized over multiple dequeue operations, making each dequeue operation O(1) on average.
+    In the best case, when stack2 is not empty, popping from stack2 is also O(1).
+- Big O Space Complexity:
+  The space complexity for the PseudoQueue class is O(N), where N is the total number of elements in both stack1 and stack2. This is because we are using two stacks to store the elements.
 
 ## Solution
 [Code](code-challenges/stacksQueue.js)
