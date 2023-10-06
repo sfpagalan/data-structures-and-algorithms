@@ -9,6 +9,7 @@
 - [Code 10](#code-10-stacks-and-queues)
 - [Code 11](#code-11-stacks-and-queues-pseudo-queue)
 - [Code 12](#code-12-stacks-and-queues-animal-shelter)
+- [Code 12](#code-13-stacks-and-queues-brackets)
 
 # Code 1: ReverseArray
 
@@ -296,3 +297,41 @@
 ## Solution
 [Code](code-challenges/AnimalShelter.js)
 ![Output](AnimalShelterOutput.png)
+
+# Code 13: Stacks and Queues: Brackets
+
+## Whiteboard Process
+
+![Brackets](LinkedListWhiteboard.png)
+
+## Approach & Efficiency
+
+- Approach:
+  1. Initialize an empty stack to keep track of opening brackets.
+  2. Iterate through each character in the input string.
+  3. If the character is an opening bracket (i.e., `{`, `[`, or `(`), push it onto the stack.
+  4. If the character is a closing bracket (i.e., `}`, `]`, or `)`):
+  - Pop the top element from the stack.
+  - Check if the popped element matches the corresponding opening bracket for the closing bracket.
+  - If they match, continue to the next character.
+  - If they don't match or if there are no opening brackets left in the stack, return false because the brackets are unbalanced.
+  5. After processing all characters, if there are still unmatched opening brackets left in the stack, return false.
+  6. If the stack is empty, return true because all brackets are balanced.
+
+- Why:
+  This approach uses a stack to maintain the order of opening brackets encountered.
+  When a closing bracket is encountered, it checks if the top of the stack contains the corresponding opening bracket.
+  If they match, the brackets are considered balanced. If they don't match or if there are no opening brackets left to match, the brackets are unbalanced.
+
+- Big O Time Complexity:
+  - The algorithm iterates through each character in the input string exactly once, where "n" is the length of the input string.
+  - Pushing and popping elements from the stack takes constant time.
+  - Therefore, the time complexity of this approach is O(n).
+
+- Big O Space Complexity:
+  - In the worst case, when the input string contains only opening brackets and no closing brackets, all opening brackets will be pushed onto the stack.
+  - Therefore, the space complexity is O(n) due to the stack's space usage.
+
+## Solution
+[Code](code-challenges/Brackets.js)
+![Output](BracketsOutput.png)
