@@ -9,7 +9,8 @@
 - [Code 10](#code-10-stacks-and-queues)
 - [Code 11](#code-11-stacks-and-queues-pseudo-queue)
 - [Code 12](#code-12-stacks-and-queues-animal-shelter)
-- [Code 12](#code-13-stacks-and-queues-brackets)
+- [Code 13](#code-13-stacks-and-queues-brackets)
+- [Code 14](#code-13-stacks-and-queues-binarytree)
 
 # Code 1: ReverseArray
 
@@ -335,3 +336,35 @@
 ## Solution
 [Code](code-challenges/Brackets.js)
 ![Output](BracketsOutput.png)
+
+# Code 14: Binary Tree
+
+## Whiteboard Process
+
+![Binary Tree](LinkedListWhiteboard.png)
+
+## Approach & Efficiency
+
+- Approach:
+  The approach involves creating two classes, BinaryTree and BinarySearchTree, both of which utilize a Node class to represent tree nodes.
+  In BinaryTree, we implement three depth-first traversal methods: pre-order, in-order, and post-order, which return arrays of values.
+  In BinarySearchTree, which is a subclass of BinaryTree, we add methods to insert values in a sorted manner and to check for the presence of a specific value.
+
+- Why:
+  This approach is chosen because it adheres to the principles of tree data structures, where each node can have at most two children.
+  It separates the concerns of basic binary tree functionality (in BinaryTree) from the more specialized behavior of a binary search tree (in BinarySearchTree). By using classes and methods, the code is modular, clean, and easy to understand and maintain.
+
+- Big O Complexity:
+  Insertion in Binary Search Tree (BST):
+    Average Case: O(log n) - Since the tree is balanced on average, the height of the tree is logarithmic with respect to the number of nodes.
+    Worst Case: O(n) - In the worst case, when the tree is skewed, the height becomes n, making insertion linear.
+  Searching in Binary Search Tree (BST):
+    Average Case: O(log n) - Similar to insertion, searching in a balanced BST is efficient.
+    Worst Case: O(n) - In the worst case (skewed tree), searching becomes linear.
+  Traversals in Binary Tree:
+    Pre-order, in-order, and post-order traversals all have a time complexity of O(n) because they visit each node once.
+
+## Solution
+[Code](code-challenges/BinaryTree.js)
+![Output](BinaryTreeOutput.png)
+![Output](BinaryTreeOutput2.png)
