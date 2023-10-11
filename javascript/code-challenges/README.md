@@ -11,6 +11,8 @@
 - [Code 12](#code-12-stacks-and-queues-animal-shelter)
 - [Code 13](#code-13-stacks-and-queues-brackets)
 - [Code 14](#code-13-stacks-and-queues-binarytree)
+- [Code 16](#code-16-binary-tree-max)
+- [Code 17](#code-17-breadth-first)
 
 # Code 1: ReverseArray
 
@@ -390,3 +392,33 @@
 [Code](code-challenges/BinaryTreeMax.js)
 ![Output](BinaryTreeMaxOutput.png)
 ![Output](BinaryTreeMaxOutput2.png)
+
+# Code 17: Breadth First
+
+## Whiteboard Process
+
+![BreadthFirst](LinkedListWhiteboard.png)
+
+## Approach & Efficiency
+
+- Approach:
+  The approach used here is a breadth-first traversal of a binary tree, with the root node being Monkey D. Luffy and his crew members forming the tree structure.
+  In breadth-first traversal, we start at the root (Luffy) and explore all nodes at the current level (Zoro and Nami) before moving on to the next level (Usopp and Sanji) and so on. This is done by using a queue data structure.
+
+- Why:
+  In the context of "One Piece," we use breadth-first traversal to capture the experience of exploring Luffy's crew from the top (captain) to the lower ranks in a structured manner.
+  The storyline of "One Piece" involves Luffy gathering and befriending various characters, much like a tree structure with Luffy at the top and his crew members forming branches. Using breadth-first traversal, we mimic how Luffy meets his crew members sequentially.
+  This approach ensures that we meet the crew members closest to Luffy before moving on to those farther away, preserving the order of their recruitment.
+
+- Big O Complexity:
+  Time Complexity:
+  - In the worst case, we will visit every node in the tree, as we need to traverse the entire structure. Therefore, the time complexity of the breadth-first traversal is O(n), where n is the number of nodes in the tree.
+  Space Complexity:
+  - The space complexity of this breadth-first traversal is determined by the maximum number of nodes at any level of the tree.
+  - In the "One Piece" tree, the highest number of nodes at any level is 2^(k-1), where k is the level number. At the first level, it's 1 node (Luffy), at the second level, it's 2 nodes (Zoro and Nami), and so on.
+  - Therefore, the space complexity is O(2^(h-1)), where h is the height of the tree. In the context of "One Piece," the height of the tree is the depth of Luffy's crew, representing how deep Luffy has explored the Grand Line in search of his dream.
+
+## Solution
+[Code](code-challenges/BreadthFirst.js)
+![Output](BreadthFirstOutput.png)
+![Output](BreadthFirstOutput2.png)
