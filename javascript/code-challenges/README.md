@@ -368,3 +368,25 @@
 [Code](code-challenges/BinaryTree.js)
 ![Output](BinaryTreeOutput.png)
 ![Output](BinaryTreeOutput2.png)
+
+# Code 16: Binary Tree Max
+
+## Whiteboard Process
+
+![Binary Tree Max](LinkedListWhiteboard.png)
+
+## Approach & Efficiency
+
+- Approach:
+  In our testing of the "findMaximum" method for a Binary Tree class with One Piece bounties, we utilize a Binary Tree structure to represent the bounties of the Straw Hat Pirates crew members. The tree's root node symbolizes Monkey D. Luffy's impressive bounty, with subsequent nodes representing the bounties of other characters. We employ a recursive approach to traverse the tree, comparing each character's bounty with the maximum value found in its left and right subtrees.
+
+- Why:
+  This approach allows us to emulate a hierarchical structure where Luffy's bounty is the most substantial, while enabling us to test whether the "findMaximum" method accurately identifies the character with the highest bounty, an important feature in the One Piece world. By implementing this approach, we can verify the correct functionality of the Binary Tree class with specific data relevant to One Piece.
+
+- Big O Complexity:
+  The Big O complexity of this testing approach is `O(n)`, where 'n' represents the number of nodes in the Binary Tree. Since we traverse each node once in the recursive search for the maximum bounty, the time complexity is linear, making it efficient even for larger crew rosters.
+
+## Solution
+[Code](code-challenges/BinaryTreeMax.js)
+![Output](BinaryTreeMaxOutput.png)
+![Output](BinaryTreeMaxOutput2.png)
