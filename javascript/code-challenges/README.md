@@ -13,6 +13,7 @@
 - [Code 14](#code-13-stacks-and-queues-binarytree)
 - [Code 16](#code-16-binary-tree-max)
 - [Code 17](#code-17-breadth-first)
+- [Code 18]()
 
 # Code 1: ReverseArray
 
@@ -422,3 +423,32 @@
 [Code](code-challenges/BreadthFirst.js)
 ![Output](BreadthFirstOutput.png)
 ![Output](BreadthFirstOutput2.png)
+
+# Code 18: Fizz Buzz
+
+## Whiteboard Process
+
+![Fizz Buzz](LinkedListWhiteboard.png)
+
+## Approach & Efficiency
+
+- Approach:
+  - We'll perform a depth-first traversal of the given k-ary tree.
+  - At each node, we'll check whether its value is divisible by 3, 5, or both.
+  - We'll update the value of the node accordingly: "Fizz" for divisible by 3, "Buzz" for divisible by 5, "FizzBuzz" for divisible by both, and the value converted to a string for other cases.
+  - Recurse on the children of the current node.
+  - Return the modified tree.
+
+- Why:
+  The approach is chosen to ensure that the tree structure is preserved, divisibility conditions are checked and acted upon, and the code is readable and maintainable. It leverages depth-first traversal and recursion to provide a versatile and efficient solution to the Fizz Buzz Tree problem.
+
+- Big O Complexity:
+  Time Complexity:
+  - The time complexity is O(n), where n is the number of nodes in the tree. We visit each node once during the depth-first traversal.
+
+  Space Complexity:
+  - The space complexity is O(h) for the function call stack, where h is the height of the tree. In the worst case, when the tree is a degenerate tree (a singly linked list), h is equal to n, resulting in O(n) space complexity.
+
+## Solution
+[Code](code-challenges/FizzBuzzTree.js)
+![Output](FizzBuzzOutput.png)
