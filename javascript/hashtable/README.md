@@ -1,4 +1,6 @@
-# Hash Tables
+# Hash
+
+## Hashmap
 
   Create a Hashtable in JavaScript, adhering to the specified interface and testing requirements.
 
