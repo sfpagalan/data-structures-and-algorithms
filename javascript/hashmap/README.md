@@ -1,8 +1,14 @@
-# Hashmap
+# Table of Contents
+
+- [Code 31](#hashmap)
+- [Code 32](#tree-intersection)
+- [Code 33](#left-join)
+
+## Hashmap
 
   Find the first repeating word in a string using a hashmap.
 
-## Pseudocode
+### Pseudocode
 
 HashMap.repeatedWord(str)
   words = str.toLowerCase().split(/\w+/)
@@ -15,7 +21,7 @@ HashMap.repeatedWord(str)
 
   return null
 
-## Approach & Efficiency
+### Approach & Efficiency
 
 - Approach
   - Split the string into words.
@@ -32,16 +38,16 @@ HashMap.repeatedWord(str)
   Space Complexity:
   - O(n), where n is the number of unique words.
 
-## Solution
+### Solution
 
 [Code](hashmap.js)
 ![Testing](hashmap.test.js)
 
-# Tree-Intersection
+## Tree-Intersection
 
   Find common elements between two binary trees.
 
-## Pseudocode
+### Pseudocode
 
 treeIntersection(tree1, tree2)
   map = new HashMap
@@ -65,7 +71,7 @@ treeIntersection(tree1, tree2)
 
   return result
 
-## Approach & Efficiency
+### Approach & Efficiency
 
 - Approach
   - Traverse the first tree and populate a hashmap.
@@ -81,7 +87,35 @@ treeIntersection(tree1, tree2)
   Space Complexity:
   - O(n), where n is the number of unique elements in the trees.
 
-## Solution
+### Solution
 
 [Code](tree-intersection.js)
 ![Testing](tree-intersection.test.js)
+
+## Left Join
+
+  Implement a simplified LEFT JOIN for 2 Hashmaps.
+
+### Approach & Efficiency
+
+- Approach
+  - Initialize an Empty Array: This will store our results.
+  - Iterate Over the First Map (Grand Line Map):
+    - For each key in the first map, check if the key exists in the second map (New World Map).
+    - If it does, append the key, its value from the first map, and its value from the second map to our results array.
+    - If it doesn't, append the key, its value from the first map, and a 'NULL' (or, in our playful analogy, 'Edward Newgate').
+
+- Why
+  - We iterate through the keys of the first map and simply check for existence in the second map.
+
+- Big O Complexity:
+  Time Complexity:
+  - O(N)
+
+  Space Complexity:
+  - O(N)
+
+### Solution
+
+[Code](leftJoin.js)
+![Testing](leftJoin.test.js)
